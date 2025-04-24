@@ -1,13 +1,25 @@
-# 🌐 Gabodo Website
+# 🌐 gabodo.xyz
 
-Welcome to the source code of **gabodo.xyz** — a personal and professional website built using GitHub Pages.
+This is the source code and content for [gabodo.xyz](https://gabodo.xyz), a personal website hosted via **GitHub Pages** and configured with a custom domain purchased on **Porkbun**.
 
-Bienvenido al código fuente de **gabodo.xyz** — un sitio web personal y profesional creado con GitHub Pages.
+## 📌 Hosting Info
+
+- **Domain Provider:** Porkbun
+- **Static Hosting:** GitHub Pages
+- **Repository:** https://github.com/gabodo/gabodo.xyz
+- **Branch:** `main`
+- **Custom Domain:** gabodo.xyz
 
 ---
 
-## 📁 Project Structure / Estructura del Proyecto
+# 🌐 gabodo.xyz
 
-This project uses a simple HTML structure hosted directly from the repository.
+Este es el código fuente y contenido de [gabodo.xyz](https://gabodo.xyz), un sitio web personal alojado con **GitHub Pages** y configurado con un dominio personalizado adquirido en **Porkbun**.
 
-Este proyecto utiliza una estructura HTML sencilla alojada directamente desde el repositorio.
+## 📌 Información de Hosting
+
+- **Proveedor de Dominio:** Porkbun  
+- **Alojamiento Estático:** GitHub Pages  
+- **Repositorio:** https://github.com/gabodo/gabodo.xyz  
+- **Rama:** `main`  
+- **Dominio Personalizado:** gabodo.xyz

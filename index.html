@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gustavo Bohorquez - Web Developer Portfolio">
+  <meta name="keywords" content="web developer, portfolio, Gustavo Bohorquez">
+  <meta property="og:title" content="Gustavo Bohorquez | Web Developer">
+  <meta property="og:description" content="Web Developer Portfolio">
+  <meta property="og:image" content="css/images/Gustavo.jpg">
+  <title>Gustavo Bohorquez | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="language-switcher">
+    <button class="language-btn" onclick="toggleLanguage()">ES</button>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <div class="text">
+        <h1>Gustavo Bohorquez</h1>
+        <h3 class="en">Web Developer</h3>
+        <h3 class="es" style="display: none;">Desarrollador Web</h3>
+        <p class="en">Creating modern and responsive web experiences</p>
+        <p class="es" style="display: none;">Creando experiencias web modernas y responsivas</p>
+        <div class="social-links">
+          <a href="https://github.com/gabodo" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/gabohorquez/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="css/images/Gustavo.jpg" alt="Gustavo Bohorquez picture" class="profile-picture">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about-me">
+      <h2 class="en">About Me</h2>
+      <h2 class="es" style="display: none;">Acerca de mí</h2>
+      <p class="en">
+        I'm a passionate web developer with expertise in creating modern, responsive websites. 
+        I focus on clean code, user experience, and performance optimization.
+      </p>
+      <p class="es" style="display: none;">
+        Soy un desarrollador web apasionado con experiencia en la creación de sitios web modernos y responsivos.
+        Me enfoco en código limpio, experiencia de usuario y optimización de rendimiento.
+      </p>
+    </section>
+
+    <section id="portfolio">
+      <h2 class="en">Featured Projects</h2>
+      <h2 class="es" style="display: none;">Proyectos Destacados</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="css/images/mariviggiani-preview.jpg" alt="Mariviggiani Website Preview">
+          </div>
+          <div class="project-info">
+            <h3>mariviggiani.com</h3>
+            <p class="en">A modern portfolio website for a photographer</p>
+            <p class="es" style="display: none;">Un sitio web de portafolio moderno para un fotógrafo</p>
+            <div class="project-links">
+              <a href="https://mariviggiani.com" target="_blank" class="project-link">View Site</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="css/images/iglesiadepiedra-preview.jpg" alt="Iglesia de Piedra Website Preview">
+          </div>
+          <div class="project-info">
+            <h3>iglesiadepiedra.net</h3>
+            <p class="en">A church website with event management</p>
+            <p class="es" style="display: none;">Un sitio web de iglesia con gestión de eventos</p>
+            <div class="project-links">
+              <a href="https://iglesiadepiedra.net" target="_blank" class="project-link">View Site</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="css/images/lerconsulting-preview.jpg" alt="LER Consulting Website Preview">
+          </div>
+          <div class="project-info">
+            <h3>lerconsulting.com.pa</h3>
+            <p class="en">A business consulting company website</p>
+            <p class="es" style="display: none;">Un sitio web para una empresa de consultoría</p>
+            <div class="project-links">
+              <a href="https://lerconsulting.com.pa" target="_blank" class="project-link">View Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technologies">
+      <h2 class="en">Technologies</h2>
+      <h2 class="es" style="display: none;">Tecnologías</h2>
+      <div class="tech-stack">
+        <div class="tech-category">
+          <h3 class="en">Frontend</h3>
+          <h3 class="es" style="display: none;">Frontend</h3>
+          <div class="tech-logos">
+            <img src="css/images/html-logo.png" alt="HTML Logo">
+            <img src="css/images/css-logo.png" alt="CSS Logo">
+            <img src="css/images/js-logo.png" alt="JavaScript Logo">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Gustavo Bohorquez. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleLanguage() {
+      const button = document.querySelector('.language-btn');
+      const enElements = document.querySelectorAll('.en');
+      const esElements = document.querySelectorAll('.es');
+      const html = document.documentElement;
+
+      if (html.lang === 'en') {
+        // Switch to Spanish
+        html.lang = 'es';
+        button.textContent = 'EN';
+        enElements.forEach(el => el.style.display = 'none');
+        esElements.forEach(el => el.style.display = 'block');
+      } else {
+        // Switch to English
+        html.lang = 'en';
+        button.textContent = 'ES';
+        enElements.forEach(el => el.style.display = 'block');
+        esElements.forEach(el => el.style.display = 'none');
+      }
+    }
+  </script>
+</body>
+</html>

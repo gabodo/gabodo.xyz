@@ -245,32 +245,48 @@ section h2::after {
 /* Technologies Section */
 .tech-stack {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
+}
+
+.tech-category {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-speed) ease;
+}
+
+.tech-category:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .tech-category h3 {
-  font-size: 1.4rem; /* Reduced font size for mobile */
+  font-size: 1.8rem;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .tech-logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
-  justify-content: center; /* Center logos on mobile */
+  justify-content: center;
 }
 
 .tech-logos img {
-  width: 60px; /* Reduced size for mobile */
+  width: 80px;
   height: auto;
   filter: brightness(0) invert(1);
   transition: transform var(--transition-speed) ease;
+  opacity: 0.8;
 }
 
 .tech-logos img:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
 
 /* Footer */
@@ -397,8 +413,17 @@ footer {
     height: 200px;
   }
 
+  .tech-stack {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .tech-category {
+    padding: 2.5rem;
+  }
+
   .tech-logos img {
-    width: 80px;
+    width: 100px;
   }
 }
 
@@ -429,5 +454,23 @@ footer {
 
   .tech-logos img {
     width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-category {
+    padding: 1.5rem;
+  }
+
+  .tech-category h3 {
+    font-size: 1.4rem;
+  }
+
+  .tech-logos {
+    gap: 1.5rem;
+  }
+
+  .tech-logos img {
+    width: 60px;
   }
 }

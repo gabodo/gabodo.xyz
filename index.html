@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gustavo Bohorquez - Web Developer Portfolio">
-  <meta name="keywords" content="web developer, portfolio, Gustavo Bohorquez">
+  <meta name="description" content="Gustavo Bohorquez - IT Consultant & Web Developer Portfolio">
+  <meta name="keywords" content="IT consultant, web developer, portfolio, Gustavo Bohorquez, WordPress, Git, AI">
   <meta property="og:title" content="Gustavo Bohorquez | IT Consultant & Web Developer">
   <meta property="og:description" content="IT Consultant & Web Developer Portfolio">
   <meta property="og:image" content="css/images/Gustavo.jpg">
+  <meta name="theme-color" content="#0d1117">
   <title>Gustavo Bohorquez | IT Consultant & Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +16,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="language-switcher">
-    <button class="language-btn" onclick="toggleLanguage()">ES</button>
+  <div class="language-switcher" role="region" aria-label="Language switcher">
+    <button class="language-btn" onclick="toggleLanguage()" aria-label="Switch language">
+      <span class="en">ES</span>
+      <span class="es" style="display: none;">EN</span>
+    </button>
   </div>
 
   <header>
@@ -28,12 +32,24 @@
         <p class="en">Creating modern and responsive web experiences with cutting-edge technologies</p>
         <p class="es" style="display: none;">Creando experiencias web modernas y responsivas con tecnologías de vanguardia</p>
         <div class="social-links">
-          <a href="https://github.com/gabodo" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/gabohorquez/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/gabodo" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/gabohorquez/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
       <div class="image">
-        <img src="css/images/Gustavo.jpg" alt="Gustavo Bohorquez picture" class="profile-picture">
+        <img src="css/images/Gustavo.jpg" alt="Gustavo Bohorquez" class="profile-picture" width="300" height="300">
       </div>
     </div>
   </header>
@@ -58,47 +74,47 @@
       <h2 class="en">Featured Projects</h2>
       <h2 class="es" style="display: none;">Proyectos Destacados</h2>
       <div class="projects-grid">
-        <div class="project-card">
+        <article class="project-card">
           <div class="project-image">
-            <img src="css/images/mariviggiani-preview.jpg" alt="Mariviggiani Website Preview">
+            <img src="css/images/mariviggiani-preview.jpg" alt="Mariviggiani Website Preview" loading="lazy">
           </div>
           <div class="project-info">
             <h3>mariviggiani.com</h3>
             <p class="en">A modern portfolio website for a photographer</p>
             <p class="es" style="display: none;">Un sitio web de portafolio moderno para un fotógrafo</p>
             <div class="project-links">
-              <a href="https://mariviggiani.com" target="_blank" class="project-link">View Site</a>
+              <a href="https://mariviggiani.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit Mariviggiani website">View Site</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card">
+        <article class="project-card">
           <div class="project-image">
-            <img src="css/images/iglesiadepiedra-preview.jpg" alt="Iglesia de Piedra Website Preview">
+            <img src="css/images/iglesiadepiedra-preview.jpg" alt="Iglesia de Piedra Website Preview" loading="lazy">
           </div>
           <div class="project-info">
             <h3>iglesiadepiedra.net</h3>
             <p class="en">A church website with event management</p>
             <p class="es" style="display: none;">Un sitio web de iglesia con gestión de eventos</p>
             <div class="project-links">
-              <a href="https://iglesiadepiedra.net" target="_blank" class="project-link">View Site</a>
+              <a href="https://iglesiadepiedra.net" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit Iglesia de Piedra website">View Site</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card">
+        <article class="project-card">
           <div class="project-image">
-            <img src="css/images/lerconsulting-preview.jpg" alt="LER Consulting Website Preview">
+            <img src="css/images/lerconsulting-preview.jpg" alt="LER Consulting Website Preview" loading="lazy">
           </div>
           <div class="project-info">
             <h3>lerconsulting.com.pa</h3>
             <p class="en">A business consulting company website</p>
             <p class="es" style="display: none;">Un sitio web para una empresa de consultoría</p>
             <div class="project-links">
-              <a href="https://lerconsulting.com.pa" target="_blank" class="project-link">View Site</a>
+              <a href="https://lerconsulting.com.pa" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit LER Consulting website">View Site</a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -110,57 +126,57 @@
           <h3 class="en">Frontend</h3>
           <h3 class="es" style="display: none;">Frontend</h3>
           <div class="tech-logos">
-            <img src="css/images/html-logo.png" alt="HTML Logo">
-            <img src="css/images/css-logo.png" alt="CSS Logo">
-            <img src="css/images/js-logo.png" alt="JavaScript Logo">
+            <img src="css/images/html-logo.png" alt="HTML Logo" loading="lazy">
+            <img src="css/images/css-logo.png" alt="CSS Logo" loading="lazy">
+            <img src="css/images/js-logo.png" alt="JavaScript Logo" loading="lazy">
           </div>
         </div>
         <div class="tech-category">
           <h3 class="en">Development Tools</h3>
           <h3 class="es" style="display: none;">Herramientas de Desarrollo</h3>
           <div class="tech-logos">
-            <img src="css/images/wordpress-logo.png" alt="WordPress Logo">
-            <img src="css/images/git-logo.png" alt="Git Logo">
-            <img src="css/images/github-logo.png" alt="GitHub Logo">
+            <img src="css/images/wordpress-logo.png" alt="WordPress Logo" loading="lazy">
+            <img src="css/images/git-logo.png" alt="Git Logo" loading="lazy">
+            <img src="css/images/github-logo.png" alt="GitHub Logo" loading="lazy">
           </div>
         </div>
         <div class="tech-category">
           <h3 class="en">Emerging Technologies</h3>
           <h3 class="es" style="display: none;">Tecnologías Emergentes</h3>
           <div class="tech-logos">
-            <img src="css/images/ai-logo.png" alt="AI Logo">
+            <img src="css/images/ai-logo.png" alt="AI Logo" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="cta-section">
-        <h2 class="en">Let's Work Together</h2>
-        <h2 class="es" style="display: none;">Trabajemos Juntos</h2>
-        <p class="en">Ready to start your project? Get in touch with me!</p>
-        <p class="es" style="display: none;">¿Listo para comenzar tu proyecto? ¡Contáctame!</p>
-        <div class="contact-buttons">
-          <a href="mailto:gustavobohorquezd@gmail.com" class="contact-btn email-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <span class="en">Email Me</span>
-            <span class="es" style="display: none;">Enviar Email</span>
-          </a>
-          <a href="https://wa.me/50764944114" target="_blank" class="contact-btn whatsapp-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            <span class="en">WhatsApp</span>
-            <span class="es" style="display: none;">WhatsApp</span>
-          </a>
-        </div>
-      </section>
+      <h2 class="en">Let's Work Together</h2>
+      <h2 class="es" style="display: none;">Trabajemos Juntos</h2>
+      <p class="en">Ready to start your project? Get in touch with me!</p>
+      <p class="es" style="display: none;">¿Listo para comenzar tu proyecto? ¡Contáctame!</p>
+      <div class="contact-buttons">
+        <a href="mailto:gustavobohorquezd@gmail.com" class="contact-btn email-btn" aria-label="Send me an email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="en">Email Me</span>
+          <span class="es" style="display: none;">Enviar Email</span>
+        </a>
+        <a href="https://wa.me/50764944114" target="_blank" rel="noopener noreferrer" class="contact-btn whatsapp-btn" aria-label="Contact me on WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span class="en">WhatsApp</span>
+          <span class="es" style="display: none;">WhatsApp</span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Gustavo Bohorquez. All rights reserved.</p>
+    <p>© 2024 Gustavo Bohorquez. All rights reserved.</p>
   </footer>
 
   <script>
@@ -173,13 +189,11 @@
       if (html.lang === 'en') {
         // Switch to Spanish
         html.lang = 'es';
-        button.textContent = 'EN';
         enElements.forEach(el => el.style.display = 'none');
         esElements.forEach(el => el.style.display = 'block');
       } else {
         // Switch to English
         html.lang = 'en';
-        button.textContent = 'ES';
         enElements.forEach(el => el.style.display = 'block');
         esElements.forEach(el => el.style.display = 'none');
       }

@@ -289,6 +289,25 @@ section h2::after {
   opacity: 1;
 }
 
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-speed) ease;
+  opacity: 0.8;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.tech-icon svg {
+  width: 80px;
+  height: 80px;
+  transition: all var(--transition-speed) ease;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -425,6 +444,11 @@ footer {
   .tech-logos img {
     width: 100px;
   }
+
+  .tech-icon svg {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -455,6 +479,11 @@ footer {
   .tech-logos img {
     width: 50px;
   }
+
+  .tech-icon svg {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -472,6 +501,11 @@ footer {
 
   .tech-logos img {
     width: 60px;
+  }
+
+  .tech-icon svg {
+    width: 60px;
+    height: 60px;
   }
 }
 

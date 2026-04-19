@@ -115,17 +115,34 @@ header {
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.8rem 1.5rem;
   border: 1px solid var(--primary-color);
-  border-radius: 6px;
+  border-radius: 8px;
   transition: all var(--transition-speed) ease;
-  font-size: 0.9rem; /* Reduced font size for mobile */
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.social-links a svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--primary-color);
+  fill: none;
+  transition: all var(--transition-speed) ease;
 }
 
 .social-links a:hover {
   background-color: var(--primary-color);
   color: var(--bg-primary);
   transform: translateY(-2px);
+}
+
+.social-links a:hover svg {
+  stroke: var(--bg-primary);
 }
 
 /* Main Content */
@@ -137,17 +154,11 @@ main {
 
 section {
   background: var(--bg-secondary);
-  border-radius: 12px; /* Reduced border radius for mobile */
-  padding: 1.5rem; /* Reduced padding for mobile */
+  border-radius: 12px;
+  padding: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: var(--card-shadow);
-  transition: transform var(--transition-speed) ease;
   border: 1px solid var(--border-color);
-}
-
-section:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--card-hover-shadow);
 }
 
 section h2 {
@@ -192,8 +203,12 @@ section h2::after {
 
 .project-image {
   width: 100%;
-  height: 180px; /* Reduced height for mobile */
+  height: 180px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
 .project-image img {
@@ -205,6 +220,38 @@ section h2::after {
 
 .project-card:hover .project-image img {
   transform: scale(1.05);
+}
+
+/* Project placeholder styling */
+.project-placeholder {
+  position: relative;
+}
+
+.project-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+}
+
+.project-placeholder[data-color="#e1306c"]::before {
+  background: linear-gradient(135deg, #e1306c 0%, #f77737 100%);
+}
+
+.project-placeholder[data-color="#4a154b"]::before {
+  background: linear-gradient(135deg, #4a154b 0%, #00a0dc 100%);
+}
+
+.project-placeholder[data-color="#0077b5"]::before {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+}
+
+.project-placeholder svg {
+  color: var(--text-muted);
+  opacity: 0.5;
 }
 
 .project-info {

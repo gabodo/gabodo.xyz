@@ -22,7 +22,7 @@
     <div class="spinner"></div>
   </div>
   <div class="language-switcher" role="region" aria-label="Language switcher">
-    <button class="language-btn" onclick="toggleLanguage()" aria-label="Switch language">
+    <button class="language-btn" onclick="toggleLanguage()" aria-label="Switch language" aria-pressed="false">
       <span class="en">ES</span>
       <span class="es" style="display: none;">EN</span>
     </button>
@@ -32,8 +32,8 @@
     <div class="header-content">
       <div class="text">
         <h1>Gustavo Bohorquez</h1>
-        <h3 class="en">IT Consultant & Web Developer</h3>
-        <h3 class="es" style="display: none;">Consultor IT & Desarrollador Web</h3>
+        <h2 class="en">IT Consultant & Web Developer</h2>
+        <h2 class="es" style="display: none;">Consultor IT & Desarrollador Web</h2>
         <p class="en">Creating modern and responsive web experiences with cutting-edge technologies</p>
         <p class="es" style="display: none;">Creando experiencias web modernas y responsivas con tecnologías de vanguardia</p>
         <div class="social-links">
@@ -81,7 +81,7 @@
       <div class="projects-grid">
         <article class="project-card">
           <div class="project-image">
-            <img src="css/images/mariviggiani-preview.jpg" alt="Mariviggiani Website Preview" loading="lazy">
+            <img src="css/images/mariviggiani-preview.jpg" alt="Mariviggiani Website Preview" loading="lazy" width="400" height="180">
           </div>
           <div class="project-info">
             <h3>mariviggiani.com</h3>
@@ -95,7 +95,7 @@
 
         <article class="project-card">
           <div class="project-image">
-            <img src="css/images/iglesiadepiedra-preview.jpg" alt="Iglesia de Piedra Website Preview" loading="lazy">
+            <img src="css/images/iglesiadepiedra-preview.jpg" alt="Iglesia de Piedra Website Preview" loading="lazy" width="400" height="180">
           </div>
           <div class="project-info">
             <h3>iglesiadepiedra.net</h3>
@@ -109,7 +109,7 @@
 
         <article class="project-card">
           <div class="project-image">
-            <img src="css/images/lerconsulting-preview.jpg" alt="LER Consulting Website Preview" loading="lazy">
+            <img src="css/images/lerconsulting-preview.jpg" alt="LER Consulting Website Preview" loading="lazy" width="400" height="180">
           </div>
           <div class="project-info">
             <h3>lerconsulting.com.pa</h3>
@@ -197,7 +197,7 @@
   </main>
 
   <footer>
-    <p>© 2024 Gustavo Bohorquez. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Gustavo Bohorquez. All rights reserved.</p>
   </footer>
 
   <script>
@@ -212,6 +212,32 @@
       }
     });
 
+    // Initialize language from localStorage or default to English
+    function initLanguage() {
+      const savedLang = localStorage.getItem('language') || 'en';
+      const html = document.documentElement;
+      const button = document.querySelector('.language-btn');
+      const enElements = document.querySelectorAll('.en');
+      const esElements = document.querySelectorAll('.es');
+
+      html.lang = savedLang;
+      if (savedLang === 'es') {
+        button.setAttribute('aria-pressed', 'true');
+        enElements.forEach(el => el.style.display = 'none');
+        esElements.forEach(el => el.style.display = 'block');
+      } else {
+        button.setAttribute('aria-pressed', 'false');
+        enElements.forEach(el => el.style.display = 'block');
+        esElements.forEach(el => el.style.display = 'none');
+      }
+    }
+
+    // Run on page load
+    initLanguage();
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     function toggleLanguage() {
       const button = document.querySelector('.language-btn');
       const enElements = document.querySelectorAll('.en');
@@ -221,11 +247,15 @@
       if (html.lang === 'en') {
         // Switch to Spanish
         html.lang = 'es';
+        localStorage.setItem('language', 'es');
+        button.setAttribute('aria-pressed', 'true');
         enElements.forEach(el => el.style.display = 'none');
         esElements.forEach(el => el.style.display = 'block');
       } else {
         // Switch to English
         html.lang = 'en';
+        localStorage.setItem('language', 'en');
+        button.setAttribute('aria-pressed', 'false');
         enElements.forEach(el => el.style.display = 'block');
         esElements.forEach(el => el.style.display = 'none');
       }
